@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Adicionar Jogos</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Tela de cadastro de Jogos - projeto matéria Aplic3 curso Informática ETER turma subsequente 3411 2022.1">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+    </head>
+    <body>
+        <style>
+            body {
+                /*alterar fundo para uma foto que eu vou fazer brevemente.
+                background:url('fundo.jpg');*/
+                background: linear-gradient(rgba(0, 0, 0, 0.329), rgba(0,0,0,0.329)100%), url('fundo.jpg');
+                color: rgb(255, 255, 255);
+                text-shadow: black 0.1em 0.1em 0.2em
+            }
+            header .container { 
+	            display: flex;
+	            flex-direction: row;
+	            align-items: center;
+	            justify-content: space-between;              
+            }
+            header .logo {
+	            margin-left: 10px;
+	            font-family: Times;
+	            font-size: 30px;
+            }
+            header nav a {
+                font-size: 20px;
+	            text-decoration: none;
+	            color: rgb(255, 253, 253);
+                text-shadow: black 0.1em 0.1em 0.2em;
+	            margin-right: 10px;
+            }
+            header nav a:hover {
+	            color: rgb(95, 94, 94);
+                text-shadow: rgb(255, 255, 255) 0.1em 0.1em 0.2em;
+            }
+            .containerCadastro {
+                margin-top: 1%;
+                margin-left: 100px;
+                margin-right: 100px;
+                padding: 15px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                
+                /*efeito vidro*/
+                box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+                backdrop-filter: blur( 3px );
+                -webkit-backdrop-filter: blur( 3px ); 
+            }
+            .cadastroJogo {
+                justify-content: center;
+                width: 90%;
+            }
+            .linha {
+                display: flex;
+                flex-direction: row;
+            }
+            .coluna-1 {
+                width: 90%;
+                margin-right: 10px;
+            }
+            .coluna-2{
+                width: 100%;
+            }
+            label {
+                font-size: 25px;
+            }
+            .inputs {
+                font-size: 17px;
+                width: 100%;
+                margin: 0;
+	            padding-top: 10px;
+                padding-bottom: 10px;
+	            border: none;
+	            margin-bottom: 10px;
+	            border-radius: 10px;
+            }
+            .botao {
+                font-size: 15px;
+                margin-top: 30px;
+                margin-right: 30px;
+                padding: 10px 20px 10px 20px;
+                background-color: rgb(255, 255, 255);
+                
+                cursor: pointer;
+                border: none;
+                border-radius: 5px;
+                transition: .3s ease all;  
+            }
+            .botao:hover{
+                background-color: rgb(82, 80, 80);
+                color: white; 
+            }
+            .botoes {
+                text-align: center;
+            }
+            .rodape {
+                margin-top: 20px;
+                text-align: center;
+            }
+
+            @media (max-width: 750px) {
+                .containerCadastro {
+                    margin-left: 20px;
+                    margin-right: 20px;  
+                }   
+            }
+
+            @media (max-width: 600px) {
+                label {
+                font-size: 20px;
+                }
+                header .logo {
+                    font-size: 25px;
+                }
+                header nav a {
+                    font-size: 15px;
+                }
+                .linha{
+                    display: flex;
+                    flex-direction: column;
+                }
+                .coluna-1 {
+                    width: 100%;
+                }
+                .coluna-2{
+                   width: 100%;
+               }
+               .botao {
+                    margin-right: 1px; 
+               }
+            }
+
+            @media (max-width: 500px) {
+                header .container { 
+	                display: flex;
+	                flex-direction: column;
+	                align-items: center;
+	                justify-content: space-between; 
+                }
+                header .logo {
+                    margin-left: 0;
+                    font-size: 30px;
+                }
+                header nav a {
+                    font-size: 20px;
+	                text-decoration: none;
+	                margin-right: 1px;
+                }
+                .botao {
+                    font-size: 13px;
+                    margin-right: 0;
+                    padding: 5px 10px 5px 10px;
+                }
+                label {
+                    font-size: 19px;
+                }
+                .containerCadastro {
+                    margin-left: 0;
+                    margin-right: 0;  
+                }
+                .linha{
+                    display: flex;
+                    flex-direction: column;
+                }
+                .coluna-1 {
+                    width: 100%;
+                }
+                .coluna-2 {
+                   width: 100%;
+               }
+            }
+
+            @media (max-width: 300px) {
+                header .container { 
+	                display: flex;
+	                flex-direction: column;
+	                align-items: center;
+	                justify-content: space-between; 
+                }
+                header .logo {
+                    margin-left: 0;
+                    font-size: 20px;
+                }
+                header nav a {
+                    font-size: 15px;
+	                text-decoration: none;
+	                margin-right: 1px;
+                }
+                .botoes {
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 10px;
+                }
+                .botao {
+                    font-size: 15px;
+                    margin-top: 8px;
+                    padding: 5px 10px 5px 10px;
+                }
+                label {
+                    font-size: 15px;
+                }
+                .containerCadastro {
+                    margin-left: 0;
+                    margin-right: 0;  
+                }
+                .linha {
+                    display: flex;
+                    flex-direction: column;
+                }
+                .coluna-1 {
+                    width: 100%;
+                }
+                .coluna-2{
+                   width: 100%;
+               }
+            }
+            
+            @media (max-width: 250px) {
+                header nav a {
+                    font-size: 12px;
+                }
+            }
+        </style>
+
+        <header>
+            <div class="container">
+                <h1 class="logo">Cadastrar Jogo</h1>
+                <nav>
+                    <a href="#">Inicio</a>
+                    <a href="#">Amigos</a>
+                    <a href="#">Jogos</a>
+                    <a href="#">Empréstimos</a>
+                </nav>
+            </div>
+        </header>
+
+        <div class="containerCadastro">
+            <div class="cadastroJogo">
+                <form>
+                    <label>Titulo:</label>
+                    <input type="text" class="inputs">
+                    <br>
+                    <label>Lançamento:</label>
+                    <input type="text" class="inputs">
+                    <br>
+                    <label>Estilo:</label>
+                    <input type="text" class="inputs">
+                    <br>
+                    <div class="linha">
+                        <div class="coluna-1">
+                            <label>Plataforma:</label>
+                            <select class="inputs">
+                                <option value="">Selecione</option>
+                                <option value="1">Console</option>
+                                <option value="2">Computador</option>
+                            </select> 
+                        </div>
+                        <div class="coluna-2">
+                            <label>Número de Jogadores:</label>
+                            <input type="text" class="inputs" >
+                        </div>
+                    </div>
+
+                    <div class="botoes">
+                        <button class="botao">Cancelar</button>
+                        <button type="reset" class="botao">Limpar</button>
+                        <button type="submit" class="botao">Adicionar</button>
+                    </div> 
+                </form>
+            </div>
+        </div>
+
+        <div class="rodape">
+            <footer>
+                <p>Desenvolvido por: Ana Kariny :)</p>
+            </footer>
+        </div>
+    </body>
+</html>
