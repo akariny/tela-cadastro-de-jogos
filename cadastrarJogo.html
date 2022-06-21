@@ -9,6 +9,8 @@
     <body>
         <style>
             body {
+                /*alterar fundo para uma foto que eu vou fazer brevemente.
+                background:url('fundo.jpg');*/
                 background: linear-gradient(rgba(0, 0, 0, 0.329), rgba(0,0,0,0.329)100%), url('fundo.jpg');
                 color: rgb(255, 255, 255);
                 text-shadow: black 0.1em 0.1em 0.2em
@@ -26,13 +28,13 @@
             }
             header nav a {
                 font-size: 20px;
-	        text-decoration: none;
-	        color: rgb(255, 253, 253);
+	            text-decoration: none;
+	            color: rgb(255, 253, 253);
                 text-shadow: black 0.1em 0.1em 0.2em;
-	        margin-right: 10px;
+	            margin-right: 10px;
             }
             header nav a:hover {
-	    	color: rgb(95, 94, 94);
+	            color: rgb(95, 94, 94);
                 text-shadow: rgb(255, 255, 255) 0.1em 0.1em 0.2em;
             }
             .containerCadastro {
@@ -71,11 +73,11 @@
                 font-size: 17px;
                 width: 100%;
                 margin: 0;
-	        padding-top: 10px;
+	            padding-top: 10px;
                 padding-bottom: 10px;
-	        border: none;
-	        margin-bottom: 10px;
-	        border-radius: 10px;
+	            border: none;
+	            margin-bottom: 10px;
+	            border-radius: 10px;
             }
             .botao {
                 font-size: 15px;
@@ -110,7 +112,7 @@
 
             @media (max-width: 600px) {
                 label {
-               	    font-size: 20px;
+                font-size: 20px;
                 }
                 header .logo {
                     font-size: 25px;
@@ -146,8 +148,8 @@
                 }
                 header nav a {
                     font-size: 20px;
-	            text-decoration: none;
-	            margin-right: 1px;
+	                text-decoration: none;
+	                margin-right: 1px;
                 }
                 .botao {
                     font-size: 13px;
@@ -224,7 +226,7 @@
                 }
             }
         </style>
-
+        
         <header>
             <div class="container">
                 <h1 class="logo">Cadastrar Jogo</h1>
@@ -236,23 +238,22 @@
                 </nav>
             </div>
         </header>
-
         <div class="containerCadastro">
             <div class="cadastroJogo">
                 <form>
                     <label>Titulo:</label>
-                    <input type="text" class="inputs">
+                    <input type="text" class="inputs" placeholder="  Insira o titulo do jogo." required>
                     <br>
                     <label>Lançamento:</label>
-                    <input type="text" class="inputs">
+                    <input type="text" class="inputs" placeholder="  DD/MM/AAAA">
                     <br>
                     <label>Estilo:</label>
-                    <input type="text" class="inputs">
+                    <input type="text" class="inputs" placeholder="  ação, luta etc.">
                     <br>
                     <div class="linha">
                         <div class="coluna-1">
                             <label>Plataforma:</label>
-                            <select class="inputs">
+                            <select class="inputs"required>
                                 <option value="">Selecione</option>
                                 <option value="1">Console</option>
                                 <option value="2">Computador</option>
@@ -260,10 +261,9 @@
                         </div>
                         <div class="coluna-2">
                             <label>Número de Jogadores:</label>
-                            <input type="text" class="inputs" >
+                            <input type="text" class="inputs" placeholder="  Somente números">
                         </div>
                     </div>
-
                     <div class="botoes">
                         <button class="botao">Cancelar</button>
                         <button type="reset" class="botao">Limpar</button>
@@ -272,7 +272,6 @@
                 </form>
             </div>
         </div>
-
         <div class="rodape">
             <footer>
                 <p>Desenvolvido por: Ana Kariny :)</p>
